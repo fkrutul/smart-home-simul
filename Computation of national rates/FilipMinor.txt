@@ -1,0 +1,14 @@
+Please refer to calculate.py for the re-writted HVAC equations
+
+For electricity price per customer, I analyzed the national dataset found at the following link:
+
+https://www.eia.gov/electricity/sales_revenue_price/pdf/table6.pdf
+
+In order to obtain an accurate cost per customer, I used R to compute the weighted mean
+which took into account the price per kilowatt hour charged by each company, and the amount
+of customers each company had.
+
+For water cost, I could not find an accurate national dataset, so instead I chose to implement
+the tiered water rate system used by Birmingham Water, found at the link below:
+
+https://www.bwwb.org/residentialrates
