@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+bandit = "*"
+black = "*"
+pylint = "*"
+
+[packages]
+flask = "*"
+flask_cors = "*"
+meteostat = "==0.2.0"
+psycopg2-binary = "*"
+flask-socketio = "*"
+requests = "*"
+pyowm = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

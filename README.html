@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Installation&sol;Usage Guide</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="installationusage-guide">Installation/Usage Guide</h1>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Make sure you have Python3 and Node installed on your system. If not(look up specific installation guides for your OS).</li>
+<li>Use PIP to install pipenv</li>
+<li>Inside the root folder of the project, run <em>pipenv install</em> to install Python dependencies</li>
+<li>cd into 'frontend'
+<ul>
+<li>Run <em>npm install</em> to get the Node dependencies.</li>
+</ul>
+</li>
+<li>You will also need an OpenWeatherMap API key to run the application
+<ul>
+<li>Go to <a>https://openweathermap.org/api</a> and register with an email for free tier access to their API.</li>
+<li>Once your account is confirmed, you can access your API key from your account page.</li>
+<li>Copy the API key to your clipboard.</li>
+<li>Create a file in root_directory/public called <em>local_config.py</em></li>
+<li>Inside that file write <code>API_key = &quot;&lt;your-copied-API-key&gt;&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>Run <em>pipenv shell</em> or <em>python -m pipenv shell</em> to enter the virtual environment (if successful 'term-project' should be in parentheses before your shell input).</li>
+<li>Open 2 terminals and make sure the pipenv environment is active in both:
+<ul>
+<li>In terminal 1:
+<ul>
+<li>cd into 'public' from the root directory</li>
+<li>Run <em>export FLASK_ENV=development</em> to set the app in development mode</li>
+<li>Run <em>flask_run</em> to start the backend server</li>
+</ul>
+</li>
+<li>In terminal 2:
+<ul>
+<li>cd into 'frontend'</li>
+<li>Run <em>npm run build</em> to build the project</li>
+<li>Run <em>npm run start</em> to start the frontend service</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In your browser, go to <em>127.0.0.1:3000</em> to see the page</li>
+</ul>
+
+    </body>
+    </html>
