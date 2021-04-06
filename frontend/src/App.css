@@ -1,0 +1,248 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.temp-up {
+  grid-area: temp-up;
+  align-self: end;
+  justify-self: center;
+  width: 150px;
+}
+
+.temp-down {
+  grid-area: temp-down;
+  align-self: start;
+  justify-self: center;
+  width: 150px;
+}
+
+.set-temp {
+  grid-area: set-temp;
+  place-self: center;
+}
+
+.ext-temp {
+  grid-area: ext-temp;
+  align-self: end;
+  justify-self: center;
+}
+
+.int-temp {
+  grid-area: int-temp;
+  align-self: center;
+  justify-self: center;
+}
+
+.weather {
+  grid-area: weather;
+  align-self: end;
+  justify-self: center;
+}
+
+.weather-icon {
+  grid-area: weather-icon;
+  align-self: start;
+  justify-self: center;
+}
+
+.time {
+  grid-area: time;
+  align-self: start;
+  justify-self: center;
+}
+
+.date {
+  grid-area: date;
+  align-self: end;
+  justify-self: center;
+}
+
+.reset {
+  grid-area: reset;
+  width: 150px;
+  place-self: center;
+}
+
+.weather-cont-title {
+  grid-area: weather-cont-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.weather-cont {
+  grid-area: weather-cont;
+  align-self: start;
+  justify-self: center;
+}
+
+.ext-temp-cont-title {
+  grid-area: ext-temp-cont-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.ext-temp-cont {
+  grid-area: ext-temp-cont;
+  align-self: start;
+  row-gap: 5px;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "temp-up"
+    "temp-down"
+    "reset";
+}
+
+.temp-delta-title {
+  grid-area: temp-delta-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.temp-delta {
+  grid-area: temp-delta;
+  align-self: start;
+  justify-self: center;
+}
+
+.water-title {
+  grid-area: water-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.water {
+  grid-area: water;
+  align-self: start;
+  justify-self: center;
+}
+
+.wattage-title {
+  grid-area: wattage-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.wattage {
+  grid-area: wattage;
+  align-self: start;
+  justify-self: center;
+}
+
+.speed-title {
+  grid-area: speed-title;
+  align-self: end;
+  justify-self: center;
+}
+
+.speed {
+  grid-area: speed;
+  align-self: start;
+  justify-self: center;
+}
+
+.dashboard-container {
+  grid-area: dashboard-container;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "date"
+    "time"
+    "int-temp"
+    "temp-up"
+    "set-temp"
+    "temp-down"
+    "ext-temp"
+    "weather"
+    "weather-icon"
+}
+
+.floorplan {
+  grid-area: floorplan;
+  place-self: center;
+}
+
+.control-panel {
+  display: grid;
+  grid-area: control-panel;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "weather-cont-title"
+    "weather-cont"
+    "ext-temp-cont-title"
+    "ext-temp-cont"
+    "temp-delta-title"
+    "temp-delta"
+    "water-title"
+    "water"
+    "wattage-title"
+    "wattage"
+    "speed-title"
+    "speed";
+}
+
+.layout-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "floorplan dashboard-container"
+    "floorplan dashboard-container"
+    "floorplan dashboard-container"
+    "floorplan dashboard-container";
+}
+
+.admin-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "control-panel floorplan dashboard-container"
+    "control-panel floorplan dashboard-container"
+    "control-panel floorplan dashboard-container"
+    "control-panel floorplan dashboard-container";
+}
